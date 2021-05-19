@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-size: 22px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .container{
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        .column{
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+
+        input[type=text],[type=number],[type=email],select{
+            width: 100%;
+            padding: 12px;
+            border:1px solid black;
+            border-radius: 2px;
+            margin-bottom: 16px;
+        }
+
+        input[type=submit]
+        {
+            padding: 16px;
+            background-color: rgba(0, 0, 0, 0.637);
+            color: white;
+            font-size: 20px;
+            margin: 4px;
+            box-shadow: -0.75px 4px 8px 0 rgba(0,0,0,0,0.8);
+            width: 25%;
+        }
+
+        row:after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        @media screen and (max-width:600px){
+            .column,input[type=submit]{
+            width:100%;
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Contact Us</h2>
+        <p><marquee>Please Fill out Details Correctly.</marquee></p>
+        <div class="row">
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_OIh45qZmXaq_oYiY0wfBkDz4PSbGe5iDM42Um91sygWgO65FRUxHZMSSBke2pr_W_k&usqp=CAU" alt="Contact_Phone">
+            </div>
+            <div class="column">
+                <form action="abc.php" myname="myform">
+                    <label for="name">Name</label>
+                    <input type="text" name="name">
+                    <label for="contact">Contact No.</label>
+                    <input type="number" maxlength="10" minlength="10" name="contact">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                    <label for="Department">Department</label> 
+                    <select name="Department">
+                        <option>Fill the Department which you belong</option>
+                        <option>CSE/CS</option>
+                        <option>CSI/IT</option>
+                        <option>ECE</option>
+                        <option>EEE</option>
+                        <option>CIVIL</option>
+                        <option>MECHANICAL</option>
+                    </select>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        h2{
+            padding: 30px;
+            background-color: black;
+            color: white;
+            font-size: 24px;
+        }
+
+        body{
+            font-size: 22px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .card{
+            display: flex;
+            flex-direction: row;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding: 10px 30px;
+            background-color: #f1f1f1;
+
+        }
+
+        .row{
+            width: 50%;
+        }
+
+        .column{
+            width: 50%;
+        }
+        input[type=text],[type=number],[type=email],select{
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        input[type=submit]
+        {
+            width: 20%;
+            padding: 16px;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        hr{
+            color: rgba(0, 0, 0, 0.383);
+        }
+
+        @media screen and (max-width:600px) {
+
+
+
+            .card{
+                flex-direction: column;
+                width: 100%;
+                margin: 0px;
+            }
+
+            input[type=submit]{
+                width: 100%;
+            }
+
+            .column{
+                width: 100%;
+            }
+
+            .row{
+                width: 100%;
+            }
+
+            #unique{
+                width: 360px;
+                align-self: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+        <h2 style="text-align: center;">Contact Us</h2><hr>
+        <p><marquee>Please Fill out Details Correctly.</marquee></p><hr>
+        <div class="card">
+            <div class="row">
+                <img id="unique" src="https://okanaganhomes.com/wp-content/uploads/2019/05/contact-us.jpg" alt="Contact_Phone">
+            </div>
+            <div class="column">
+                <form action="abc.php" myname="myform">
+                    <label for="name">Name</label>
+                    <input type="text" name="name">
+                    <label for="contact">Contact No.</label>
+                    <input type="number" maxlength="10" minlength="10" name="contact">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                    <label for="Department">Department</label> 
+                    <select name="Department">
+                        <option>Fill the Department which you belong</option>
+                        <option>CSE/CS</option>
+                        <option>CSI/IT</option>
+                        <option>ECE</option>
+                        <option>EEE</option>
+                        <option>CIVIL</option>
+                        <option>MECHANICAL</option>
+                    </select>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+</body>
+</html>
